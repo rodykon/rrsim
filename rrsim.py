@@ -1,7 +1,4 @@
-from robot import Robot
-from game import ScoreBoard
-from alliance import Alliance
-from field import Field
+from argparse import ArgumentParser
 import pygame
 import time
 from pygame.locals import *
@@ -14,9 +11,15 @@ SCREEN_WIDTH = 1280
 SCREEN_HEIGHT = 720
 
 
+def parse_args():
+    parser = ArgumentParser("RRSIM - FRC 2022 Rapid React Simulator")
+    parser.add_argument("config_file", nargs="?", default="default_configs/config.json",
+                        help="Path to the JSON configuration file.")
+    return parser.parse_args()
+
+
 def main():
-    # Initialize robots
-    field, bots = parse_config("default_configs/config.json")
+    field, bots = parse_config(parse_args().config_file)
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     pygame.display.set_caption('Rapid React Simulator')

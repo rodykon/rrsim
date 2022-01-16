@@ -1,0 +1,49 @@
+{
+  "field": {
+    "cargo_hub_timeout": 7.0
+  },
+  "robots": [
+    {
+      "starting_position": [11.0, 2.0],
+      "collect_time": "3.0",
+      "shoot_time": "1.0",
+      "velocity": "5.0",
+      "alliance": "RED"
+    },
+    {
+      "starting_position": [11.0, 4.0],
+      "collect_time": "6.0",
+      "shoot_time": "1.5",
+      "velocity": "4.0",
+      "alliance": "RED"
+    },
+    {
+      "starting_position": [11.0, 8.0],
+      "collect_time": "3.0",
+      "shoot_time": "1.5",
+      "velocity": "4.5",
+      "alliance": "RED"
+    },
+    {
+      "starting_position": [5.0, 2.0],
+      "collect_time": "3.0",
+      "shoot_time": "1.0",
+      "velocity": "5.0",
+      "alliance": "BLUE"
+    },
+    {
+      "starting_position": [5.0, 4.0],
+      "collect_time": "6.0",
+      "shoot_time": "1.5",
+      "velocity": "4.0",
+      "alliance": "BLUE"
+    },
+    {
+      "starting_position": [5.0, 8.0],
+      "collect_time": "3.0",
+      "shoot_time": "1.5",
+      "velocity": "4.5",
+      "alliance": "BLUE"
+    }
+  ]
+}

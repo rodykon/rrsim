@@ -27,11 +27,12 @@ def parse_config(config_path: str):
         collect_time = float(safe_dict_lookup(robot, "collect_time"))
         shoot_time = float(safe_dict_lookup(robot, "shoot_time"))
         velocity = float(safe_dict_lookup(robot, "velocity"))
+        accuracy = float(safe_dict_lookup(robot, "accuracy"))
         alliance = safe_dict_lookup(robot, "alliance")
         if alliance not in ["RED", "BLUE"]:
             raise ConfigParsingException("Alliance value must be either 'RED' or 'BLUE'")
         alliance = Alliance(alliance)
-        robots.append(Robot(starting_pos, collect_time, shoot_time, velocity, alliance))
+        robots.append(Robot(starting_pos, collect_time, shoot_time, velocity, accuracy, alliance))
 
     field_config = safe_dict_lookup(data, "field")
     field = Field(ScoreBoard(), float(safe_dict_lookup(field_config, "cargo_hub_timeout")))

@@ -39,6 +39,9 @@ class GraphicsArea:
         font = pygame.font.Font(pygame.font.get_default_font(), size)
         self.screen.blit(font.render(text, True, color), self.__convert_point(pos))
 
+    def draw_line(self, color, start_pos, end_pos, width=1):
+        pygame.draw.line(self.screen, color, self.__convert_point(start_pos), self.__convert_point(end_pos), width)
+
     def __convert_point(self, point):
         x, y = point
         x = (x / self.real_width) * self.width

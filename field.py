@@ -74,6 +74,9 @@ class Field:
         self.hub.add_cargo(alliance)
         self.score_keeper.cargo_to_top(alliance)
 
+    def miss_cargo(self, alliance: Alliance):
+        self.floor_cargo.append(get_random_cargo(alliance))
+
     def select_nearest_cargo(self, alliance: Alliance, position) -> Cargo:
         chosen = min([cargo for cargo in self.floor_cargo if cargo.alliance == alliance and not cargo.is_selected],
                      key=lambda cargo: sqrt((cargo.x-position[0])**2 + (cargo.y-position[1])**2))

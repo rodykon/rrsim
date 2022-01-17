@@ -47,6 +47,11 @@ def main():
         total_time += dt
         last_time = current_time
 
+    while True:
+        for event in pygame.event.get():
+            if event.type in (QUIT, KEYDOWN):
+                sys.exit()
+
 
 if __name__ == '__main__':
     main()

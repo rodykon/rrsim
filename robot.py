@@ -10,7 +10,7 @@ if TYPE_CHECKING:
 
 
 class Robot:
-    ROBOT_LEN = 0.3
+    ROBOT_LEN = 0.7
 
     def __init__(self, position: Tuple[float, float], collect_time: float, shoot_time: float, velocity: float,
                  alliance: Alliance):

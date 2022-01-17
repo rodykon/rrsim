@@ -30,7 +30,7 @@ DISTRIBUTION_PATH = "default_configs/cargo_dist.csv"
 
 
 class Cargo:
-    CARGO_RADIUS = 3
+    CARGO_RADIUS = 0.24
 
     def __init__(self, x: float, y: float, alliance: Alliance):
         self.x = x

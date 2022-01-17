@@ -20,7 +20,8 @@ class GraphicsArea:
         if center[0] > self.width or center[1] > self.height:
             raise ValueError("Invalid circle coordinate")
 
-        pygame.draw.circle(self.screen, color, self.__convert_point(center), radius, width)
+        pygame.draw.circle(self.screen, color, self.__convert_point(center), self.__convert_dimensions(radius, 0)[0],
+                           width)
 
     def draw_rect(self, color, rect):
         left, top, width, height = rect

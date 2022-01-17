@@ -91,8 +91,8 @@ class Robot:
                             self.ROBOT_LEN, self.ROBOT_LEN))
         if self.num_cargo:
             graphics.draw_circle("black", (self.position[0], self.position[1]), Cargo.CARGO_RADIUS, 1)
-        if self.path:
-            self.path.draw(graphics)
+        #if self.path:
+        #    self.path.draw(graphics)
 
     def __get_current_action(self) -> Callable:
         return self.cycle[self.current_action]

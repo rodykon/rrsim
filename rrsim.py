@@ -19,7 +19,7 @@ def parse_args():
 
 
 def main():
-    field, bots = parse_config(parse_args().config_file)
+    field, bots, match_length = parse_config(parse_args().config_file)
     pygame.init()
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     pygame.display.set_caption('Rapid React Simulator')
@@ -27,7 +27,7 @@ def main():
     score_area = GraphicsArea(screen, (0, SCREEN_WIDTH//2), SCREEN_WIDTH, SCREEN_HEIGHT-SCREEN_WIDTH//2)
     total_time = 0.0
     last_time = time.time()
-    while total_time < 60.0 * 2.0:
+    while total_time < match_length:
         current_time = time.time()
         dt = current_time - last_time
         for event in pygame.event.get():

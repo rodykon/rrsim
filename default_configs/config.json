@@ -1,6 +1,7 @@
 {
   "field": {
-    "cargo_hub_timeout": 7.0
+    "cargo_hub_timeout": 7.0,
+    "match_length": 120
   },
   "robots": [
     {

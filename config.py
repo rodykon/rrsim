@@ -37,7 +37,7 @@ def parse_config(config_path: str):
     field_config = safe_dict_lookup(data, "field")
     field = Field(ScoreBoard(), float(safe_dict_lookup(field_config, "cargo_hub_timeout")))
 
-    return field, robots
+    return field, robots, float(safe_dict_lookup(field_config, "match_length"))
 
 
 if __name__ == '__main__':

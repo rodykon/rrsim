@@ -1,6 +1,5 @@
 from __future__ import annotations
 from math import exp, log
-from matplotlib import pyplot as plt
 from random import random
 import numpy as np
 from math import ceil
@@ -107,16 +106,4 @@ def get_random_cargo(alliance: Alliance) -> Cargo:
 def initialize_cargo() -> List[Cargo]:
     return [get_random_cargo(Alliance.RED) for _ in range(NUM_CARGO)] + \
            [get_random_cargo(Alliance.BLUE) for _ in range(NUM_CARGO)]
-
-
-if __name__ == "__main__":
-    cargo = initialize_cargo()
-    x = []
-    y = []
-    for c in cargo:
-        x.append(c.x)
-        y.append(c.y)
-    plt.plot(x, y, "bo")
-    plt.show()
-    print(cargo)
     

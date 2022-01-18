@@ -1,6 +1,10 @@
 # rrsim
 Simulator for FRC 2022 challenge: Rapid React
 
+
+https://user-images.githubusercontent.com/34969776/149988183-ad7e44d7-21fa-4293-8983-f21e744d2dc0.mp4
+
+
 ## Usage
 
 In order to run the simulator use the following:
